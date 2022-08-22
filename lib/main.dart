@@ -1,131 +1,59 @@
 import 'package:flutter/material.dart';
+import 'StartupNameGenerator.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    title: 'Flutter Library',
+    initialRoute: '/',
+    routes: {
+      '/': (context) => const LibraryList(),
+      '/StartupNameGenerator': (context) => const StartupNameGenerator(),
+    },
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Startup Name Generator',
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
-        ),
-      ),
-      home: const RandomWords(),
-    );
-  }
-}
-
-class _RandomWordsState extends State<RandomWords> {
-  final _suggestions = <String>[];
-  final _saved = <String>{};
+class _RandomWordsState extends State<LibraryList> {
   final _biggerFont = const TextStyle(fontSize: 18);
-  final _fixedLengthList = <String>[
-    'one',
-    'two',
-    'three',
-    'four',
-    'five',
-    'six',
-    'seven',
-    'eight',
-    'nine',
-    'ten',
-    'eleven'
+  final _itemList = <dynamic>[
+    ['Startup Name Generator', '/StartupNameGenerator'],
+    ['two', '/RouteTableMove'],
+    ['three', ''],
+    ['four', ''],
+    ['five', ''],
+    ['six', ''],
+    ['seven', ''],
+    ['eight', ''],
+    ['nine', ''],
+    ['ten', ''],
+    ['eleven', '']
   ];
   @override
   Widget build(BuildContext context) {
-    print(_fixedLengthList);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Startup Name Generator'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.list),
-            onPressed: _pushSaved,
-            tooltip: 'Saved Suggestions',
-          ),
-        ],
+        title: const Text('Flutter Library'),
       ),
       body: ListView.builder(
-        padding: const EdgeInsets.all(16.0),
-        itemBuilder: (context, i) {
-          if (i.isOdd) return const Divider();
-
-          final index = i ~/ 2;
-          if (index >= _suggestions.length) {
-            _suggestions.addAll(_fixedLengthList.take(10));
-          }
-
-          final alreadySaved = _saved.contains(_suggestions[index]);
-
-          return ListTile(
-            title: Text(
-              _suggestions[index],
-              style: _biggerFont,
-            ),
-            trailing: Icon(
-              alreadySaved ? Icons.favorite : Icons.favorite_border,
-              color: alreadySaved ? Colors.red : null,
-              semanticLabel: alreadySaved ? 'Remove from saved' : 'Save',
-            ),
-            onTap: () {
-              setState(() {
-                if (alreadySaved) {
-                  _saved.remove(_suggestions[index]);
-                } else {
-                  _saved.add(_suggestions[index]);
-                }
-              });
-            },
-          );
-        },
-      ),
-    );
-  }
-
-  void _pushSaved() {
-    Navigator.of(context).push(
-      MaterialPageRoute<void>(
-        builder: (context) {
-          final tiles = _saved.map(
-            (pair) {
-              return ListTile(
-                title: Text(
-                  pair,
-                  style: _biggerFont,
-                ),
-              );
-            },
-          );
-          final divided = tiles.isNotEmpty
-              ? ListTile.divideTiles(
-                  context: context,
-                  tiles: tiles,
-                ).toList()
-              : <Widget>[];
-
-          return Scaffold(
-            appBar: AppBar(
-              title: const Text('Saved Suggestions'),
-            ),
-            body: ListView(children: divided),
-          );
-        },
-      ),
+          padding: const EdgeInsets.all(16.0),
+          itemCount: _itemList.length,
+          itemBuilder: (context, i) {
+            return ListTile(
+              title: Text(
+                _itemList[i][0],
+                style: _biggerFont,
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed(_itemList[i][1]);
+              },
+            );
+          }),
     );
   }
 }
 
-class RandomWords extends StatefulWidget {
-  const RandomWords({super.key});
+class LibraryList extends StatefulWidget {
+  const LibraryList({super.key});
 
   @override
-  State<RandomWords> createState() => _RandomWordsState();
+  State<LibraryList> createState() => _RandomWordsState();
 }
