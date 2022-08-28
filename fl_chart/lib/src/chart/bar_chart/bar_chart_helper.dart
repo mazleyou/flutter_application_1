@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../list_wrapper.dart';
+import 'package:fl_chart/src/utils/list_wrapper.dart';
 
 import 'bar_chart_data.dart';
 

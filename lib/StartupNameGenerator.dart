@@ -5,7 +5,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
-class _RandomWordsState extends State<StartupNameGenerator> {
+class _StartupNameState extends State<StartupNameGenerator> {
   final _suggestions = <WordPair>[];
   final _saved = <WordPair>{};
   final _biggerFont = const TextStyle(fontSize: 18);
@@ -106,5 +106,5 @@ class StartupNameGenerator extends StatefulWidget {
   const StartupNameGenerator({super.key});
 
   @override
-  State<StartupNameGenerator> createState() => _RandomWordsState();
+  State<StartupNameGenerator> createState() => _StartupNameState();
 }
