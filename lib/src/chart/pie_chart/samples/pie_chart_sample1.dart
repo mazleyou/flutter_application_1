@@ -1,7 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'indicator.dart';
-import '../../utils/color_extensions.dart';
 
 class PieChartSample1 extends StatefulWidget {
   const PieChartSample1({Key? key}) : super(key: key);

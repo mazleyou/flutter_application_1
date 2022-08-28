@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bar_chart/bar_chart_page.dart';
+import 'running_schedule_page.dart';
 
 class RunningSchedule extends StatefulWidget {
   const RunningSchedule({super.key});
@@ -22,7 +22,7 @@ class _RunningScheduleState extends State<RunningSchedule> {
           ),
         ],
       ),
-      body: SafeArea(child: BarChartPage()),
+      body: const SafeArea(child: BarChartPage()),
     );
   }
 

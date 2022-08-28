@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'StartupNameGenerator.dart';
-import 'chart.dart';
-import 'running_schedule.dart';
+import 'src/list_view/StartupNameGenerator.dart';
+import 'src/chart/chart.dart';
+import 'src/running_schedule/running_schedule.dart';
+import 'src/like_button/like_button_demo.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -12,6 +13,7 @@ void main() {
       '/StartupNameGenerator': (context) => const StartupNameGenerator(),
       '/Chart': (context) => const chart(),
       '/RunningSchedule': (context) => const RunningSchedule(),
+      '/LikeButtonDemo': (context) => const LikeButtonDemo(),
     },
   ));
 }
@@ -20,9 +22,9 @@ class _RandomWordsState extends State<LibraryList> {
   final _biggerFont = const TextStyle(fontSize: 18);
   final _itemList = <dynamic>[
     ['Startup Name Generator', '/StartupNameGenerator'],
-    ['chart', '/Chart'],
+    ['Chart Demo', '/Chart'],
     ['RUNNING SCHEDULE', '/RunningSchedule'],
-    ['four', ''],
+    ['Like Button Demo', '/LikeButtonDemo'],
     ['five', ''],
     ['six', ''],
     ['seven', ''],

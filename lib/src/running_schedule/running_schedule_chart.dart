@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:math';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import '../../utils/color_extensions.dart';
 
 class BarChartSample1 extends StatefulWidget {
   final List<Color> availableColors = const [
@@ -45,7 +44,7 @@ class BarChartSample1State extends State<BarChartSample1> {
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
                   const Text(
-                    'Mingguan',
+                    '운동 기록',
                     style: TextStyle(
                         color: Color(0xff0f4a3c),
                         fontSize: 24,
@@ -55,7 +54,7 @@ class BarChartSample1State extends State<BarChartSample1> {
                     height: 4,
                   ),
                   const Text(
-                    'Grafik konsumsi kalori',
+                    '일주일 기록',
                     style: TextStyle(
                         color: Color(0xff379982),
                         fontSize: 18,

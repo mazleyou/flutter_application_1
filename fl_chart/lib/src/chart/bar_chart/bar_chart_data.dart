@@ -7,7 +7,6 @@ import 'package:fl_chart/src/chart/bar_chart/bar_chart_helper.dart';
 import 'package:fl_chart/src/utils/lerp.dart';
 import 'package:fl_chart/src/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:fl_chart/src/extensions/color_extension.dart';
 import 'dart:math';
 
 /// [BarChart] needs this class to render itself.
