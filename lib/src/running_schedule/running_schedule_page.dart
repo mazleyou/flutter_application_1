@@ -17,8 +17,9 @@ class _BarChartPageState extends State<BarChartPage> {
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xff232040),
-      padding: const EdgeInsets.fromLTRB(20, 120, 20, 120),
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           const SizedBox(height: 45.0),
           const BarChartSample1(),
@@ -78,7 +79,14 @@ class _BarChartPageState extends State<BarChartPage> {
             physics: const NeverScrollableScrollPhysics(), // 스크롤 안되도록 설정하는 옵션 값
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
-              return Text('Row $index');
+              return Text(
+                'Row $index',
+                textAlign: TextAlign.start,
+                style: const TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                ),
+              );
             },
           ),
         ],

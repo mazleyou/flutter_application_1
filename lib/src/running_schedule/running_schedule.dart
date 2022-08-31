@@ -22,7 +22,8 @@ class _RunningScheduleState extends State<RunningSchedule> {
           ),
         ],
       ),
-      body: const SafeArea(child: BarChartPage()),
+      body: const SingleChildScrollView(
+          scrollDirection: Axis.vertical, child: BarChartPage()),
     );
   }
 

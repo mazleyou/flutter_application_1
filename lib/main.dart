@@ -3,6 +3,7 @@ import 'src/list_view/StartupNameGenerator.dart';
 import 'src/chart/chart.dart';
 import 'src/running_schedule/running_schedule.dart';
 import 'src/like_button/like_button_demo.dart';
+import 'src/map_view/MapDemo.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,6 +15,7 @@ void main() {
       '/Chart': (context) => const chart(),
       '/RunningSchedule': (context) => const RunningSchedule(),
       '/LikeButtonDemo': (context) => const LikeButtonDemo(),
+      '/MapDemo': (context) => const MapDemo(),
     },
   ));
 }
@@ -25,7 +27,7 @@ class _RandomWordsState extends State<LibraryList> {
     ['Chart Demo', '/Chart'],
     ['RUNNING SCHEDULE', '/RunningSchedule'],
     ['Like Button Demo', '/LikeButtonDemo'],
-    ['five', ''],
+    ['Map Demo', '/MapDemo'],
     ['six', ''],
     ['seven', ''],
     ['eight', ''],
