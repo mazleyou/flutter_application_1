@@ -226,6 +226,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.20-nullsafety.5"
+  home_widget:
+    dependency: "direct main"
+    description:
+      name: home_widget
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.6"
   http:
     dependency: transitive
     description:
@@ -380,6 +387,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.1"
+  pedantic:
+    dependency: transitive
+    description:
+      name: pedantic
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.11.1"
   petitparser:
     dependency: transitive
     description:
@@ -394,6 +408,34 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.2"
+  quick_actions:
+    dependency: "direct main"
+    description:
+      name: quick_actions
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  quick_actions_android:
+    dependency: transitive
+    description:
+      name: quick_actions_android
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.2"
+  quick_actions_ios:
+    dependency: transitive
+    description:
+      name: quick_actions_ios
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.0+14"
+  quick_actions_platform_interface:
+    dependency: transitive
+    description:
+      name: quick_actions_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   rxdart:
     dependency: transitive
     description:
@@ -413,6 +455,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.2"
+  speech_to_text:
+    dependency: "direct main"
+    description:
+      name: speech_to_text
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.6.1"
+  speech_to_text_platform_interface:
+    dependency: transitive
+    description:
+      name: speech_to_text_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
   stack_trace:
     dependency: transitive
     description:
@@ -476,6 +532,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.7.0"
+  workmanager:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: f37742bcf612c51e9571d623138a21a90a5992ea
+      resolved-ref: f37742bcf612c51e9571d623138a21a90a5992ea
+      url: "https://github.com/sunalwaysknows/flutter_workmanager"
+    source: git
+    version: "0.5.0-dev.8"
   xml:
     dependency: transitive
     description:
